@@ -16,13 +16,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NtF-2c-IIh">
-                    <rect key="frame" x="16" y="47" width="358" height="343"/>
+                    <rect key="frame" x="16" y="70" width="358" height="340"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="343" id="mCS-K3-59p"/>
+                        <constraint firstAttribute="height" constant="340" id="3kH-rc-7Md"/>
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RYo-wf-lQY">
-                    <rect key="frame" x="16" y="480" width="358" height="206"/>
+                    <rect key="frame" x="16" y="500" width="358" height="206"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8e-be-Mrd">
                             <rect key="frame" x="0.0" y="0.0" width="358" height="103"/>
@@ -47,7 +47,6 @@
                         <constraint firstItem="w8e-be-Mrd" firstAttribute="top" secondItem="RYo-wf-lQY" secondAttribute="top" id="HGU-Ix-ZlR"/>
                         <constraint firstAttribute="bottom" secondItem="MeD-ii-yF6" secondAttribute="bottom" id="J8b-Sk-pHF"/>
                         <constraint firstAttribute="trailing" secondItem="MeD-ii-yF6" secondAttribute="trailing" id="MVg-aJ-LtA"/>
-                        <constraint firstAttribute="height" constant="206" id="RUv-bO-EVT"/>
                         <constraint firstItem="w8e-be-Mrd" firstAttribute="leading" secondItem="RYo-wf-lQY" secondAttribute="leading" id="asU-e1-nIr"/>
                         <constraint firstItem="MeD-ii-yF6" firstAttribute="leading" secondItem="RYo-wf-lQY" secondAttribute="leading" id="q2l-eW-lXv"/>
                         <constraint firstAttribute="trailing" secondItem="w8e-be-Mrd" secondAttribute="trailing" id="rBq-eE-plt"/>
@@ -55,27 +54,26 @@
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npQ-10-4k2">
-                    <rect key="frame" x="173" y="733" width="45" height="45"/>
+                    <rect key="frame" x="173" y="753" width="45" height="34.333333333333371"/>
                     <color key="backgroundColor" red="0.99607843139999996" green="0.44705882349999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="9eb-eU-q5g"/>
-                    </constraints>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system"/>
+                    <connections>
+                        <action selector="btnGoNextPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="it9-0D-nZy"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="npQ-10-4k2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="173" id="0j2-sS-krT"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="npQ-10-4k2" secondAttribute="bottom" constant="32" id="2By-Ib-CML"/>
                 <constraint firstItem="RYo-wf-lQY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="9jD-b4-hsD"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RYo-wf-lQY" secondAttribute="trailing" constant="16" id="H6O-vU-cCl"/>
                 <constraint firstItem="RYo-wf-lQY" firstAttribute="top" secondItem="NtF-2c-IIh" secondAttribute="bottom" constant="90" id="L31-sL-a62"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NtF-2c-IIh" secondAttribute="trailing" constant="16" id="QqG-jP-Iua"/>
-                <constraint firstItem="NtF-2c-IIh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="b3E-PJ-udA"/>
-                <constraint firstItem="npQ-10-4k2" firstAttribute="top" secondItem="RYo-wf-lQY" secondAttribute="bottom" constant="47" id="twf-u0-7Qo"/>
+                <constraint firstItem="NtF-2c-IIh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="Vmf-ZP-EF4"/>
+                <constraint firstItem="npQ-10-4k2" firstAttribute="top" secondItem="RYo-wf-lQY" secondAttribute="bottom" constant="47" id="qwg-MB-8NH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="npQ-10-4k2" secondAttribute="trailing" constant="172" id="y2H-sT-k3d"/>
                 <constraint firstItem="NtF-2c-IIh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="zkd-8P-45Y"/>
             </constraints>

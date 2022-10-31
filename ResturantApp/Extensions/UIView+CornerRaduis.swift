@@ -27,4 +27,11 @@ extension UIView {
         let nib = UINib(nibName: nibName, bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
+    
+    func addRoundedCornerToView()
+    {
+        self.layer.cornerRadius = (self.frame.size.width) / 2;
+        self.layer.cornerRadius = (self.frame.size.height) / 2;
+        self.clipsToBounds = true
+    }
 }

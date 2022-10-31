@@ -32,6 +32,15 @@ class FoodDetailsController{
                     productModel.rating = rating ?? 0.0
                     productModel.price = price ?? 0
                     productModel.title = title ?? ""
+//                    let imagesArr = json?["images"] as? [String]
+//                    productModel.images = imagesArr ?? []
+
+                    
+                    //var imageModelArr = productModel.images
+//                    for image in imagesArr ?? []{
+//                        let model = productModel.images[image]
+//                        imageModelArr.append(model)
+//                    }
                     success?(productModel)
                 } catch let err {
                     print(err.localizedDescription)

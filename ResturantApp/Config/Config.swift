@@ -14,13 +14,15 @@ struct Config{
         static let onBoard = "OnBoardingVC"
         static let foodDetails = "FoodDetailsVC"
         static let login = "LoginVC"
+        static let filter = "HomeFilterVC"
     }
     
     struct StoryBoards{
         
         static let auth = "Auth"
         static let home = "Home"
-        static let onBoard = "OnBoarding"
+        static let onBoard = "Main"
+        
     }
     
     struct CollectionViews{

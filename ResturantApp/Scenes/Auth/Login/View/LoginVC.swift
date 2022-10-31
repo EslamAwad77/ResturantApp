@@ -14,6 +14,8 @@ class LoginVC: UIViewController {
     @IBOutlet weak var btnShowPass: UIButton!
     @IBOutlet weak var lblErrEmail: UILabel!
     @IBOutlet weak var lblErrPass: UILabel!
+    @IBOutlet weak var viewPass: UIView!
+    @IBOutlet weak var viewEmail: UIView!
     
     //MARK: - Actions: -
     
@@ -54,6 +56,10 @@ extension LoginVC {
 
 extension LoginVC {
     func setupUI(){
+        viewEmail.addborder(10)
+        viewPass.addborder(10)
+        viewEmail.layer.cornerRadius = 30
+        viewPass.layer.cornerRadius = 30
         lblErrEmail.isHidden = true
         lblErrPass.isHidden = true
     }
@@ -76,7 +82,6 @@ extension LoginVC {
                 self.showAlert(message: (model.message))
             } else if model.status == 200 {
                 print("user Token = \((model.user?.token)!)")
-                //DispatchQueue
                 self.goToFoodList()
             }
         }, error: { err in

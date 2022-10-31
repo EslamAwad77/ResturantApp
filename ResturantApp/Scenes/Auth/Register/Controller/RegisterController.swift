@@ -23,8 +23,10 @@ class RegisterController{
                     do {
                         let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
                         let msg = json?["message"] as? String
+                        let status = json?["status"] as? Int
                         let result = DefaultResponse()
                         result.message = msg ?? "Error"
+                        result.status = status ?? 0
                         print(result.message)
                         success?(result)
                     } catch let err {

@@ -15,6 +15,7 @@ class ProductModel{
     var rating: Double = 0.0
     var price: Int = 0
     var description: String = ""
+    var images: [String] = []
     
     init(){}
     
@@ -26,6 +27,7 @@ class ProductModel{
         self.rating = (apiModel?["rating"] as? Double) ?? 0.0
         self.price = (apiModel?["price"] as? Int) ?? 0
         self.description = (apiModel?["description"] as? String) ?? ""
-
+        self.images = (apiModel?["images"] as? [String]) ?? []
     }
 }
+

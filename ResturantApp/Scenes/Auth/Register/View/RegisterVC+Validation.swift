@@ -44,21 +44,22 @@ extension RegisterVC {
             self.lblPass.text = ""
         }
         
-        if (txtFieldPass.text?.isEmpty ?? true) == true {
+        if (txtFieldConfirmPass.text?.isEmpty ?? true) == true {
             isValid = false
-            self.lblPass.isHidden = false
-            self.lblPass.text = "Repeat Your Password"
-        } else if ValidationManager.validate.invalidPassword(txtFieldPass.text!)! == false {
+            self.lblConfirmPass.isHidden = false
+            self.lblConfirmPass.text = "Repeat Your Password"
+        } else if ValidationManager.validate.invalidPassword(txtFieldConfirmPass.text!)! == false {
             isValid = false
-            self.lblPass.isHidden = false
-            self.lblPass.text = "Enter Valid Password must have at least One Upper and Lower Case and numbers"
-        }else if txtFieldConfirmPass != txtFieldPass{
-            self.lblPass.isHidden = false
-            self.lblPass.text = "Password must be the same"
+            self.lblConfirmPass.isHidden = false
+            self.lblConfirmPass.text = "Enter Valid Password must have at least One Upper and Lower Case and numbers"
+        }else if txtFieldConfirmPass.text != txtFieldPass.text{
+            isValid = false
+            self.lblConfirmPass.isHidden = false
+            self.lblConfirmPass.text = "Password must be the same"
 
         } else {
-            self.lblPass.isHidden = true
-            self.lblPass.text = ""
+            self.lblConfirmPass.isHidden = true
+            self.lblConfirmPass.text = ""
         }
         return isValid
     }

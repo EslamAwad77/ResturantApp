@@ -1,5 +1,5 @@
 //
-//  OnBoardingTitleCell.swift
+//  OnBaordingCell.swift
 //  ResturantApp
 //
 //  Created by eslam awad elsayed awad on 27/10/2022.
@@ -7,21 +7,19 @@
 
 import UIKit
 
-class OnBoardingTitleCell: UICollectionViewCell {
+class OnBaordingSlideCell: UICollectionViewCell {
     
-    //Variables :-
-    static let identifer = String(describing: OnBoardingTitleCell.self)
+    static let identifer = String(describing: OnBaordingSlideCell.self)
     
-    //Outlets :-
-    
+    @IBOutlet weak var imgViewSlide: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDesc: UILabel!
     
     
     
-    func setup(_ slide: OnBoardingTitleModel){
+    func setup(_ slide: OnBoardingSlideModel){
+        imgViewSlide.image = slide.image
         lblTitle.text = slide.title
         lblDesc.text = slide.description
     }
-    
 }

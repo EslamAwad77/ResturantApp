@@ -7,11 +7,10 @@
 
 import UIKit
 
-struct OnBoardingTitleModel{
+struct OnBoardingSlideModel{
+    let image: UIImage
     let title: String
     let description: String
 }
 
-struct OnBoardingImageModel{
-    let image: UIImage
-}
+

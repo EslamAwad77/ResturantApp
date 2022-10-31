@@ -14,4 +14,12 @@ pod 'ESPullToRefresh'
 pod 'RadioButton'
 pod 'SKRadioButton'
 pod 'M13Checkbox'
+pod 'SwiftMessages'
+pod 'FirebaseAuth'
+pod 'FirebaseCore'
+pod 'FBSDKLoginKit'
+pod 'GoogleSignIn'
+pod 'CHTCollectionViewWaterfallLayout'
+pod 'TTSegmentedControl', '~>0.4.9'
+
 end
