@@ -17,7 +17,6 @@ class HomeVC: UIViewController {
     lazy var homeFilterVC = UIStoryboard(name: Config.StoryBoards.home, bundle: nil).instantiateViewController(withIdentifier: Config.ViewControllers.filter)
     
     //MARK: - Outlets :-
-
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collViewFood: UICollectionView!
     @IBOutlet weak var viewReloading: UIView!
@@ -26,21 +25,6 @@ class HomeVC: UIViewController {
     @IBOutlet weak var viewSegmented: UIView!{
         didSet{
             viewSegmented.layer.cornerRadius = 30
-
-        }
-
-    }
-    @IBOutlet weak var btnMobile: UIButton!{
-        didSet{
-            btnMobile.layer.cornerRadius = 30
-            
-        }
-
-    }
-    @IBOutlet weak var btnStore: UIButton!{
-        didSet{
-            btnStore.layer.cornerRadius = 30
-
         }
     }
     
@@ -180,7 +164,6 @@ extension HomeVC: UISearchBarDelegate{
         print("\(searchText)")
         productsFiltered = []
         if searchText != "" {
-          
             for i in 0 ..< products.count{
                 let productObj = products[i]
                 if (productObj.title.lowercased().contains(searchText.lowercased())){

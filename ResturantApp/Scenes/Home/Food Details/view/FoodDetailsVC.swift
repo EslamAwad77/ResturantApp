@@ -30,9 +30,7 @@ class FoodDetailsVC: UIViewController {
     @IBOutlet weak var lblDeviceCountPayment: UILabel!
     @IBOutlet weak var stepper: UIStepper!
     
-    
     //MARK: - Actions :
-    
     @IBAction func btnBackPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -68,8 +66,6 @@ extension FoodDetailsVC{
     }
 }
 
-
-
 extension FoodDetailsVC{
     private func setup(_ Details: ProductModel){
         imgViewProduct.kf.indicatorType = .activity
@@ -81,7 +77,6 @@ extension FoodDetailsVC{
         lblRate.text = Details.rating.description
         lblDesc.text = Details.description
         lblPrice.text = "$" + Details.price.description
-        
     }
 }
 

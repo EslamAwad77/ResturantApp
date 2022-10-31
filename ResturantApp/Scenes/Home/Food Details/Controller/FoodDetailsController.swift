@@ -32,6 +32,7 @@ class FoodDetailsController{
                     productModel.rating = rating ?? 0.0
                     productModel.price = price ?? 0
                     productModel.title = title ?? ""
+                    
 //                    let imagesArr = json?["images"] as? [String]
 //                    productModel.images = imagesArr ?? []
 
