@@ -33,8 +33,8 @@ class FoodDetailsController{
                     productModel.price = price ?? 0
                     productModel.title = title ?? ""
                     
-//                    let imagesArr = json?["images"] as? [String]
-//                    productModel.images = imagesArr ?? []
+                    let imagesArr = json?["images"] as? [String]
+                    productModel.images = imagesArr ?? []
 
                     
                     //var imageModelArr = productModel.images

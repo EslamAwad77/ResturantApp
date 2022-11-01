@@ -7,11 +7,10 @@
 
 import UIKit
 
-//class CollectionViewCell: UICollectionViewCell {
-//    //MARK: - Variables :
-//    static let identifer = String(describing: CollectionViewCell.self)
-//    
-//    //MARK: - Outlests :
-//    @IBOutlet weak var imgViewProduct: UIImageView!
-//    
-//}
+class CollectionViewCell: UICollectionViewCell {
+    //MARK: - Variables :
+    static let identifer = String(describing: CollectionViewCell.self)
+    
+    //MARK: - Outlests :
+    @IBOutlet weak var imgViewProduct: UIImageView!
+}

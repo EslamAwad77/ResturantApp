@@ -13,7 +13,7 @@ class FoodDetailsVC: UIViewController {
     //MARK: - Variables :
     var productID = 0
     var count = 0
-    //var product = ProductModel()
+    var images: [String] = []
     var controller: FoodDetailsController? = FoodDetailsController()
     
     //MARK: - Outlets :
@@ -29,6 +29,7 @@ class FoodDetailsVC: UIViewController {
     @IBOutlet weak var viewChart: UIView!
     @IBOutlet weak var lblDeviceCountPayment: UILabel!
     @IBOutlet weak var stepper: UIStepper!
+    @IBOutlet weak var collectionViewImages: UICollectionView!
     
     //MARK: - Actions :
     @IBAction func btnBackPressed(_ sender: UIButton) {
@@ -61,18 +62,14 @@ extension FoodDetailsVC{
     private func setupUI(){
         imgViewChart.roundedImage()
         viewChart.addRoundedCornerToView()
-//        collectionViewImages.delegate = self
-//        collectionViewImages.dataSource = self
+        collectionViewImages.delegate = self
+        collectionViewImages.dataSource = self
     }
 }
 
 extension FoodDetailsVC{
     private func setup(_ Details: ProductModel){
-        imgViewProduct.kf.indicatorType = .activity
-        if let url = URL(string: Details.thumbnail){
-            imgViewProduct.kf.setImage(with: url)
-            imgViewProduct.cornerRaduis = 20
-        }
+        self.images = Details.images
         lblTitle.text = Details.title
         lblRate.text = Details.rating.description
         lblDesc.text = Details.description
@@ -84,7 +81,6 @@ extension FoodDetailsVC{
     private func getData(){
         controller?.getData(productId: productID, success: { productModel in
             self.setup(productModel)
-            //self.product.images = productModel.images
         }, error: { error in
             DispatchQueue.main.async {
                 self.showAlert(message: error)
